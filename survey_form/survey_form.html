@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <h1 id="title">Survey Form</h1>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <p id="description">This is a survey form</p> 
+  <form id="survey-form">
+    <fieldset>
+      <label for="name-label" id="name-label">Name:<input type="text" id="name" name="Name" class="inline" required placeholder="Enter your name"/></label>
+      <label for="email-label" id="email-label">Email:<input type="email" id="email" name="Email" class="inline" placeholder="Enter your email" required/></label>
+      <label for="number-label" id="number-label">Number:<input type="number" name="number" id="number" min="13" max="120" class="inline" placeholder="Enter a number 13-120">
+      </label>
+      <label> Current occupation:
+      <select id="dropdown" na,e="Occupation">
+          <option value="1">Student</option>
+          <option value="2">Salaried Employee     </option>
+          <option value="3"> Business     </option>
+           <option value="4"> Unemployed   </option>
+      </select>
+<fieldset>
+  <legend> Work Experience</legend>
+   <label for="0-5"><input type="radio" name="work-experience" class="inline" 
+value="0-5" checked> 0-5 years</label>
+   <label><input type="radio" name="work-experience" class="inline" 
+value="5-10"> 5-10 years</label>
+</fieldset>
+
+<fieldset>
+    <legend>Hobbies</legend>
+    <label for="sports"><input type="checkbox" name="hobbies" value="sports"
+class="inline">Sports</label>
+    <label for="gaming"><input type="checkbox" name="hobbies" value="gaming"
+class="inline">Gaming</label>
+    <label for="movies"><input type="checkbox" name="hobbies" value="movies"
+class="inline">Watch movies</label>
+</fieldset>
+<label>Any suggestions:<textarea></textarea>
+      <input type="submit" value="Submit" id="submit">
+  </form>
+</body>
+</html>
