@@ -1,0 +1,27 @@
+
+td {
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 100px;
+    margin: 1.5px;
+    padding: 15px;
+}
+.red {
+    background-color: red;
+}
+.green {
+    background-color: green;
+}
+.yellow {
+    background-color: yellow;
+}
+.blue {
+    background-color: blue;
+}
+.white {
+    background-color: white;
+}
+.white.center{
+    border-radius: 70px;
+}
