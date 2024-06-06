@@ -1,0 +1,128 @@
+*{
+    font-family: Helvetica, sans-serif;
+}
+
+body{
+    background-color: #eeeeee;
+}
+#nav-bar {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-bar ul li {
+    float: left;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#nav-bar ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#nav-bar ul li a:hover {
+    background-color: #111;
+}
+
+#header-img{
+    width: 33px; 
+    height: 40px;
+}
+
+#Product_Video{
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+#Product-name{
+    text-align: center;
+}
+
+.video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Description, #Specifications {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+#buy-now {
+    text-align: center;
+}
+
+#form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #666666;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #000000;
+}
+

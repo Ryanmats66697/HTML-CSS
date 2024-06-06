@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header id="header">
+      
+      <nav id="nav-bar">
+        <ul class="nav-bar">
+            <li><img id="header-img" src="apple_logo.jpg"></li>
+            <li><a class="nav-link" href="#Product_Video">Product Video</a></li>
+            <li><a class="nav-link" href="#Description">Description</a></li>
+            <li><a class="nav-link" href="#Specifications">Specifications</a></li>
+            <li><a class="nav-link" href="#buy-now">Buy Now</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="Product_Video">
+        <h1 id="Product-name">MacBook Air , M1</h1>
+        <div class="video">
+          <video id="video" controls>
+            <source src="Product_video.mp4"></video>
+          </video>
+        </div>
+    </div>
+    <div id="Description">
+        <h2>Description</h2>
+        <p id="Description-title">
+          About this item
+          <ul id="Description-list">
+            <li>All-Day Battery Life - Go longer than ever with up to 18 hours of battery life.</li>
+            <li>Powerful Performance – Take on everything from professional-quality editing to action-packed gaming with ease. The Apple M1 chip with an 8-core CPU delivers up to 3.5x faster performance than the previous generation while using way less power.</li>
+            <li>Superfast Memory – 8GB of unified memory makes your entire system speedy and responsive. That way it can support tasks like memory-hogging multitab browsing and opening a huge graphic file quickly and easily.</li>
+            <li>Stunning Display – With a 13.3-inch/33.74 cm Retina display, images come alive with new levels of realism. Text is sharp and clear, and colors are more vibrant.</li>
+          </ul>
+        </p>
+    </div>
+    <div id="Specifications">
+      <h2>Specifications</h2>
+      <ul>
+        <li>Screen Size -	13 Inches</li>
+        <li>Colour - Space Grey</li>
+        <li>Hard Disk Size -256GB</li>
+        <li>RAM Memory Installed Size	- 8 GB</li>
+      </ul>
+    </div>
+    <div id="buy-now">
+      <h2>Buy Now</h2>
+      <form id="form" action="https://www.freecodecamp.com/email-submit" method="POST">
+        <label for="email">Email ID:</label><input type="email" placeholder="abc@email.com" id="email" name="email">
+        <label for="phone-number">Phone-number</label><input type="number" id="phone-number">
+        <label for="address">Address</label><textarea id="address"></textarea>
+        <input type="submit" id="submit" value="Buy Now">
+      </form>
+    </div>
+  </body>
+</html>
