@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div id="main" align="center">
+        <h1 align="center">Simple example of XMLHttpRequest Objects</h1>
+        <select id="selectOption" onchange="updatePage(this.value)">
+            <option value="pen.html">Pen</option>
+            <option value="eraser.html">Eraser</option>
+            <option value="pencil.html">Pencil</option>
+            <option value="stapler.html">Stapler</option>
+        </select>
+        <br><br>
+        <div id="update" style="border: 1px rgb(0, 0, 0) solid; width: 50%;">
+            Select an option to see the result
+        </div>
+    </div>
+    <script>
+        function updatePage(url) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4) {
+                    if (this.status == 200) {
+                        document.getElementById("update").innerHTML = this.responseText;
+                    } else {
+                        document.getElementById("update").innerHTML = "<h2> Some Error Occurred </h2>";
+                    }
+                }
+            };
+            xhttp.open("GET", url, true);
+            xhttp.send();
+        }
+    </script>
+</body>
+
+</html>
