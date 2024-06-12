@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div id="main" align="center" style="border: 5px green dashed; width:50%;">
+        <h1 align="center">Update the list of states based on country selection</h1>
+        <form>
+            Select your country:
+            <select id="country" onchange="send_with_ajax(this.value + '.html')">
+                <option>Select</option>
+                <option value="in">India</option>
+                <option value="jp">Japan</option>
+                <option value="ch">China</option>
+            </select>
+            <br>
+            <hr>
+            <br>
+            The state list will be updated when you select a country
+            <br>
+            Select a state:
+            <select id="state">
+                <option>Select</option>
+            </select>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        function alertContents(httpRequest) {
+            if (httpRequest.readyState === 4) {
+                if (httpRequest.status === 200) {
+                    document.getElementById("state").innerHTML = httpRequest.responseText;
+                } else {
+                    document.getElementById("information").innerHTML = "<h2> Some Error Occurred </h2>";
+                }
+            }
+        }
+
+        function send_with_ajax(the_url) {
+            if (the_url !== 'Select.html') {
+                var httpRequest = new XMLHttpRequest();
+                httpRequest.onreadystatechange = function() {
+                    alertContents(httpRequest);
+                };
+                httpRequest.open("GET", the_url, true);
+                httpRequest.send(null);
+            }
+        }
+    </script>
+</body>
+
+</html>
