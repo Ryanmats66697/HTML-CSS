@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery Demo Program</title>
+        <script src="jquery.js"></script>
+    </head>
+   
+     <script>
+        $( document ).ready(function() {
+        $( "p" ).click(function() {
+        $(this).hide();
+        alert( "No don't do it ")
+        });
+        });
+    </script>
+    <body>
+    <p>Hide me</p>
+    <p>Do not click me</p>
+    <p>Please leave me alone</p>
+    <div>This text will not hide</div>
+    </body>
+</html>
