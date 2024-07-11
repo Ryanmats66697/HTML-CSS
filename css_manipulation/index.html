@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery Demo Program</title>
+        <script src="jquery.js"></script>
+        <style>
+            div { border: 15px solid orange; border-radius: 50px; padding: 15px; margin: auto; }
+            h2 { color: red; text-align: center; font-size: 2em; }
+            li { font-size: 1.8em; }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>Click me</p>
+            <p>Me too</p>
+        </div>
+        
+        <script>
+            $(document).ready(function() {
+                $("div p").css("border", "15px dotted blue");
+                
+                $("div p").click(function() {
+                    $(this).css("border", "5px solid red");
+                });
+            });
+        </script>
+    </body>
+</html>
