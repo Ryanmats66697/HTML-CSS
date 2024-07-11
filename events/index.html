@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery Demo Program</title>
+        <script src="jquery.js"></script>
+        <style>
+            div { border: 15px solid orange; border-radius: 50px; padding: 15px; margin: auto; }
+            h2 { color: red; text-align: center; font-size: 2em; }
+            li { font-size: 1.8em; }
+            p { font-size: 1.5em; }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>Hover over me</p>
+            <p>Me too</p>
+        </div>
+        <div id="mouseover">
+        </div>
+        <div id="mouse">
+            <span id="hover"></span>
+        </div>
+        <div id="walk">
+            Move the mouse over the div.
+        </div>
+        <script>
+            $(document).ready(function() {
+                $("p").mouseenter(function() {
+                    $(this).css({
+                        "background-color": "yellow",
+                        "font-weight": "bold"
+                    });
+                });
+
+                $("p").mouseleave(function() {
+                    $(this).css({
+                        "background-color": "#dcdcdc",
+                        "font-weight": "normal"
+                    });
+                });
+                
+                $("#mouseover").mouseover(function() {
+                    $(this).append("<br>APPEND");
+                });
+
+                $("#mouse").hover(function() {
+                    $("#hover").text("IN");
+                }, function() {
+                    $("#hover").text("OUT");
+                });
+
+                var walk = 0;
+                var hk = 100;
+                $("#walk").mouseover(function() {
+                    $(this).text("Walked: " + (++walk));
+                    if (walk > hk) {
+                        hk += 100;
+                        $(this).append("<br>Walked " + hk + " times.");
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
