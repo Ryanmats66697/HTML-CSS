@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="jquery.js"></script>
+        <title>Key Events</title>
+    </head>
+    <body>
+        <script>
+          $(document).ready(function(){
+                // Handle blur event for username input
+                $("#username").on("blur", function(){
+                    var unl = $(this).val();
+                    if(unl.length < 5){
+                        $("#username").focus().select();
+                        $("p#msg1").html("User Name is too small");
+                    }
+                    else {
+                        $("p#msg1").html("User Name OK").fadeTo(1000, 0.1);
+                    }
+                });
+
+                // Handle focus event for all input elements
+                $("input").on("focus", function(){
+                    $(this).prev("span").css("display", "inline").fadeTo(1500, 0.5);
+                });
+            });
+        </script>
+        <div>
+            Registration Form
+            <form>
+                <p><span>Please enter Full name:</span><input id="username" type="text"></p>
+                <p id="msg1"></p>
+                <p><span>Please choose a good password:</span><input id="password" type="password"></p>
+                
+            </form> 
+        </div>
+    </body>
+</html>

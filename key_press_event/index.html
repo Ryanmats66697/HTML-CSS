@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="jquery.js"></script>
+        <title>Key Events</title>
+    </head>
+    <body>
+        <script>
+            $(document).ready(function(){
+                $("input").on("keydown", function(){
+                    $("p").css({"background-color":"yellow","border":"15px solid red"});
+                });
+                $("input").on("keyup", function(){
+                    $("p").css({"background-color":"lime","border":"15px dashed blue"});
+                });
+            });
+        </script>
+        <div align="center">
+            Enter something <input type="text">
+            <p>The background changes</p>
+        </div>
+    </body>
+</html>
