@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <title>Key Events</title>
+    </head>
+    <body>
+        <script>
+            $(function(){
+                $("#get").on("click",function(){
+                    var $paradata = $("p").text();
+                    alert($paradata);
+                });
+                $("#set").on("click",function(){
+                    var $mydate = new Date();
+                    $("p").text($mydate);
+                });
+            });
+        </script>
+
+    <div id="d1">
+        This is first div 01
+        <p>I am a paragraph</p>
+        <p>I am a paragraph</p>
+    </div>
+    <button id="get">Get</button>
+    <button id="set">Set</button>
+    </body>
+</html>

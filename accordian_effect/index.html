@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <title>Accordian effect</title>
+        <style>
+            .question{
+                background-color: greenyellow;
+            }
+            .content{
+                margin: auto;
+                align-items: center;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <span class="question" id="Q1">Q1. What is jQuery?</span><br>
+            <p id="A1">jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animations, and Ajax.</p>
+        </div>
+        <div class="content">
+            <span class="question" id="Q2">Q2. What is an API?</span><br>
+            <p id="A2">An API, or Application Programming Interface, is a set of rules and definitions that allow software applications to communicate with each other.</p>
+        </div>
+        <div class="content">
+            <span class="question" id="Q3">Q3. What is CSS?</span><br>
+            <p id="A3">CSS, or Cascading Style Sheets, is a stylesheet language used to describe the presentation of a document written in HTML or XML.</p>
+        </div>
+
+        <script>
+            $(document).ready(function(){
+            $("#A1").hide();
+            $("#A2").hide();
+            $("#A3").hide();
+
+            $("#Q1").click(function(){
+                $("#A1").show(1000, "linear");
+            });
+            $("#Q2").click(function(){
+                $("#A2").show(1000, "linear");
+            });
+            $("#Q3").click(function(){
+                $("#A3").show(1000, "linear");
+            });
+        });
+
+           
+        </script>
+    </body>
+ </html>
