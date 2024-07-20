@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <title>Key Events</title>
+        <style>
+            .redborder { border: 5px solid red; padding: 15px; margin: 15px; height: 100px; width: 400px; }
+            .greenclass { border: 5px dashed green; padding: 15px; margin: 15px; height: 100px; width: 400px; }
+        </style>
+    </head>
+    <body>
+        <script>
+            $(document).ready(function() {
+                $("#b1").click(function () { 
+                    $("#d1").addClass("redborder");
+                });
+
+                $("#b2").click(function() {
+                    $("#d2").addClass("greenclass");
+                });
+
+                $("#b3").click(function() {
+                    $("#d2").removeClass("greenclass");
+                });
+
+                $("#b4").click(function() {
+                    $("#d1, #d2").toggleClass("redborder");
+                });
+            });
+        </script>
+
+        <div id="d1" class="redborder">
+            This is div1 <strong>Cool</strong>. <p>This is some stuff</p>
+        </div>
+        <div id="d2">
+            This is div 2 <strong>Hello how are you ?</strong>. <p>This is a paragraph</p>
+        </div>
+        <br>
+        <button id="b1">Add Class red</button>
+        <button id="b2">Add Class green</button>
+        <button id="b3">Remove class green</button>
+        <button id="b4">Toggle red class</button>
+    </body>
+</html>

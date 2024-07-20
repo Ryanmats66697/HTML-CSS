@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <title>DOM Manipulation</title>
+    </head>
+    <body>
+        <script>
+            $(function(){
+                $("input").on("keyup", function() {
+                    var myvalue = $ (this).val();
+                    $ ("p").text( myvalue );
+                });
+                $("button#txt").on("click",function() {
+                    $ ("input").text( "Happy Birthday");
+                    alert("input box cannot be edited via .text()");
+                });
+                $("button#val").on("click", function(){
+                    $("input").val("Happy Birthday");
+                });
+            });
+        </script>
+
+        <div align="center"></div>
+        <form>
+            <input type="text" value="default text">
+        </form> <p> </p>
+        <button id="txt">Click to update . via text</button>&nbsp;&nbsp;
+        <button id="val">Click to update . via val()</button>
+    </body>
+</html>
