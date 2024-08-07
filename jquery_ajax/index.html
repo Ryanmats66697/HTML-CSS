@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax J Query</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function (){
+        $("button").click(function (){
+            $("#d1").load("demo_text.txt #title" , function (responseTxt, statusTxt, xhr){
+                if(statusTxt == "success")
+                    alert("Fragment Loaded !!" + responseTxt);
+                if(statusTxt != "success")
+                    alert("Error:"+ xhr.status + ": "+xhr.statusText);
+            });
+            $("#p1").load("demo_text.txt #para", function (){
+            });
+        });
+    });
+</script>
+</head>
+<body>
+<div id="d1"><h2>This heading will change using normal jQuery AJAX</h2></div>
+<p id="p1"></p>
+<button>Get External Content</button>
+</body>
+</html>
